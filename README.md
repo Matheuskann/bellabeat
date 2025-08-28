@@ -10,6 +10,7 @@ Analisar dados de rastreadores fitness (Fitbit) para identificar padrões de uso
 ---
 
 ##  Perguntas de Negócio
+-Eu utilizei apenas a tabela dailyActivity_merged pois continha os dados mais importantes que eu iria precisar para a análise. Os procedimentos de tratamento aplicados foram:
 - Quais são algumas tendências no uso de dispositivos inteligentes?
 - Como essas tendências podem se aplicar aos clientes da Bellabeat?
 - Como essas tendências podem ajudar a influenciar a estratégia de marketing da Bellabeat?
@@ -19,7 +20,7 @@ Analisar dados de rastreadores fitness (Fitbit) para identificar padrões de uso
 ##  Ferramentas Utilizadas
 - **DuckDB (SQL)** – Para consultas e análise dos dados.
 - **Tableau** – Para criação de dashboards e visualizações interativas.
-- **Kaggle Dataset** – [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit)
+- **Kaggle Dataset**(dados que eu utilizei chamado "mturkfitbit_export_3.12.16-4.11.16") – [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit)
 
 ---
 
@@ -39,24 +40,15 @@ O processo foi dividido em três etapas:
 - Cálculo do tempo médio em cada categoria de atividade.
 
 ### 3. Visualização
-- Para comunicar os resultados de forma clara e intuitiva, os dados processados no DuckDB foram exportados para o Tableau, onde 
-foram organizados em gráficos interativos e painéis que destacam os principais padrões e tendências identificados.
+- Exportação dos dados para **Tableau** e criação de dashboards interativos.
 
 ---
 
 ##  Principais Insights
-•Correlação entre Passos e Calorias: Existe uma forte correlação positiva entre a média de passos diários e as calorias 
-queimadas. O dia com maior atividade é a quarta-feira, com 7.511 passos e 2.377 calorias. Por outro lado, o dia com 
-menor atividade é a terça-feira, com cerca de 5.000 passos e 1.800 calorias queimadas.
- •Engajamento dos Usuários:A análise mostra uma grande variação no nível de engajamento. Apenas dois usuários 
-registraram dados por mais de 30 dias. A maioria dos usuários registrou dados por 19 dias ou menos, sendo que o menor 
-registro foi de 8 dias.
- •Níveis de Atividade: A maior parte do tempo dos usuários é gasta em um estado sedentário, com uma média de 16,5 
-horas por dia. O tempo de atividade é significativamente menor: cerca de 2,9 horas em atividades leves, 13 minutos em 
-atividades moderadas, e 16 minutos em atividades muito ativas.
- •Oportunidade para a Empresa:A inconsistência nos dados de passos, onde alguns usuários registram calorias sem 
-registrar passos, indica que os usuários podem estar esquecendo de usar os dispositivos ou de ativar o aplicativo Essa é 
-uma oportunidade clara para a Bellabeat implementar lembretes e incentivos para um uso mais consistente
+ **Correlação entre passos e calorias** – Forte correlação positiva, mas nenhum dia atingiu a meta da OMS (10.000 passos).  
+ **Dia mais ativo** – Quarta-feira (~7.500 passos) e menos ativo – Terça-feira (~5.000 passos).  
+ **Sedentarismo elevado** – Usuários passam, em média, **16,5 horas/dia** em estado sedentário.  
+ **Engajamento baixo** – A maioria registrou dados por **19 dias ou menos**.  
 
 ---
 
